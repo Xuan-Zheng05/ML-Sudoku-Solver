@@ -1,0 +1,15 @@
+.sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 0px;
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1; /* Ensures the grid is square */
+  }
+  
+  .sudoku-row {
+    display: contents; /* Ensures grid layout handles rows */
+  }
+  
+  

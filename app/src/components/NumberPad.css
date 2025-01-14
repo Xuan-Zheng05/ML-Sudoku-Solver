@@ -1,0 +1,156 @@
+.number-pad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1;
+    background-color: red;
+   
+}
+  
+.number-button {
+    padding: 10px;
+    font-size: 2.5rem;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+  
+.number-button:hover {
+    background-color: #0056b3;
+}
+
+.tools-pad {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+   
+    width: 100%;
+    gap: 10px;
+    max-width: 320px;
+    
+   
+}
+.tool-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertical centering */
+    align-items: center;    /* Horizontal centering */
+    
+}
+.tools-button {
+   
+    cursor: pointer;
+    border: 0px ;
+    background-color: #eaeef4;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    position: relative;
+  
+}
+.tools-button.selected {
+    border:1px solid blue
+}
+.tools-button .circle-number {
+    position:absolute;
+    top:-10px;
+    right: -10px;
+    width: 25px;
+    height: 25px;
+    background-color: #325aaf;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    border-radius: 50%;
+    font-size: 12px;
+
+}
+
+
+.tools-button .oval {
+    position:absolute;
+    top:-10px;
+    right: -20px;
+    width: 35px;
+    height: 25px;
+    background-color: #adb6c2;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30%;
+    font-size: 12px;
+
+}
+.tools-button .oval.selected {
+   
+    background-color: #325aaf;
+   
+
+}
+.tools-button:hover{
+    background-color: #c0dafc;
+}
+
+.tools-button svg {
+    font-size: 30px; /* Ensure icon size */
+    color: #325aaf; /* Icon color */
+}
+
+.tools-label{
+    margin-top: 5px;
+    font-size: 0.8rem;
+    text-align: center;
+    color: #325aaf;
+}
+
+.newGame-button{
+    background-color: #325aaf;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    max-width: 320px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: 0px;
+    max-height: 60px;
+
+}
+
+
+
+@media (max-width: 768px) {
+    .number-pad {
+        all: unset;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        gap: 10px;
+        background-color: red;
+        margin-bottom: 20px;
+        width: 100%; /* Use full available space */
+        margin: 0 auto 20px;
+    }
+    .number-button {
+        
+        box-sizing: border-box; /* Include padding/border in size */
+        width: 100%; /* Ensures full use of the grid column */
+        height: 60px;
+        font-size: 2.5rem;
+        cursor: pointer;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+    }
+    .newGame-button{
+       display: none;
+    
+    }
+  }

@@ -1,0 +1,51 @@
+.sudoku-cell {
+  background-color: white;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  border: 1px solid #bfc6d4; /* Optional thin border for each cell */
+  box-sizing: border-box;
+  width: 100%; /* Ensure it takes up the full grid cell size */
+  height: 100%; /* Ensure it matches width */
+}
+
+
+.sudoku-cell.samenum{
+  background-color: #839ccd;
+}
+.sudoku-cell.selected{
+  background-color: #bbdefb;
+}
+.sudoku-cell.relatived{
+  background-color: #e2ebf3;
+}
+
+.sudoku-cell:nth-child(3n) {
+  border-right: 3px solid #344861; /* Right side of every 3rd column */
+}
+
+
+/* Apply thick left border for every block's first column */
+.sudoku-cell:nth-child(9n + 1) {
+  border-left: 2px solid #344861;
+}
+
+.sudoku-cell:nth-child(-n + 9) {
+  border-top: 2px solid #344861; /* First row */
+}
+.sudoku-cell:nth-child(n + 73) {
+  border-bottom: 2px solid #344861; /* Thick bottom border for the last row */
+}
+.sudoku-cell:nth-child(n+28):nth-child(-n+36) {
+  border-top: 2px solid #344861; /* 4th row */
+}
+.sudoku-cell:nth-child(n+55):nth-child(-n+63) {
+  border-top: 2px solid #344861; /* 7th row */
+}
+
+.error-cell{
+  color: red;
+}
+
